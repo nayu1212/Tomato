@@ -1,7 +1,7 @@
-import React, { useContext,useState } from 'react'
-import './PlaceOrder.css'
-import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
+import React, { useContext, useState } from 'react'
+import { StoreContext } from '../../context/StoreContext'
+import './PlaceOrder.css'
 
 const PlaceOrder = () => {
   const {getTotalCartAmount,token,food_list,cartItems,url}=useContext(StoreContext);
@@ -40,6 +40,7 @@ const PlaceOrder = () => {
 
    }
    let response = await axios.post(url+"/api/order/place",orderData,{headers:{token}})
+   console.log(response);
    if(response.data.success){
     const {session_url}=response.data;
     window.location.replace(session_url);
