@@ -1,6 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import {food_list} from '../assets/frontend_assets/assets'
 import axios from 'axios';
+import { createContext, useEffect, useState } from "react";
 
 
 
@@ -8,7 +7,7 @@ export const StoreContext=createContext(null);
 
 const StoreContextProvider=(props)=>{
     const [cartItems,setCartItems]=useState({});
-    const url='http://localhost:4000'
+    const url='https://tomato-backend-ypxk.onrender.com'
     const [token,setToken]=useState('')
     const [food_list,setFoodList]=useState([])
 
