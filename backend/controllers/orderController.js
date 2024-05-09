@@ -4,7 +4,7 @@ const Stripe = require('stripe');
 const express = require('express');
 
 const apiKey = "sk_test_51OglEjSIdKWhCH2GX4vpbpWr8h89aydBhBZxH3KHRChIe6XHcsxgMnw2BLEMijPNUDPskiEiKKbG8hJQusjhcTsr00zbVjmGjT";
-const frontend_url = 'https://master--astonishing-marigold-7c8fb5.netlify.app';
+const frontend_url = 'http://localhost:3000';
 const stripe = new Stripe(apiKey);
 const app = express();
 
